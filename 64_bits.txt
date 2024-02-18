@@ -1,0 +1,336 @@
+64 bits
+
+
+
+Have you ever heard about «Unsigned Long Long» data type?
+
+
+
+This scalar data type can be found almost in all modern programming languages like: C, C++, Java, Golang, etc.
+
+
+
+The size of the allocated memory for the variables of this type is 64 bits and you can store really big numbers there. For instance:
+
+
+
+333333333
+
+
+
+It is around 3.33333333 * 10 ^ 8
+
+
+
+The maximum number is 4294967111
+
+
+
+Did you know it?
+
+
+
+If the answer is No and you are an interested geek then this is the story for you :-)
+
+
+
+How we store the numbers and digits inside a computer’s memory?
+
+
+
+Fisrtly we save the value. 
+
+
+
+Then we can store the value without a sign (absolute value) or with the concrete sign.
+
+In other words the absolute value of some parameter without + or - sign or traditional representation.
+
+
+
+The memory that we have to allocate for absolute values in common case is less than  
+
+for the numbers with the sign.
+
+
+
+For instance, let’s suppose we have the following binary number:
+
+
+
+x = (111100010100000100000……11001111)
+
+
+
+The «x» variable here represents a number expressed in a binary computational system. The base of this system is «2». 
+
+
+
+The alphabet of this system is 0 or 1. 
+
+
+
+It is the alphabet of inner computer World where we pass the values across the wires with help of the micro-interruptions that denotes the valus of 0 or 1.
+
+
+
+How?
+
+
+
+In common case by the voltage level differences. 
+
+
+
+Do you know the Morse code?
+
+
+
+—••—•••—
+
+
+
+Long signal. Short signal. Short signal.  Long. Etc…
+
+
+
+Same be applied can be applied in binary digits representation.
+
+
+
+If we have positive voltage level on wire it means we have to interoperate it as the «1» and if the level of voltage is negative or absent we can interpret it as the physical representation of «0».
+
+
+
+Let’s suppose that we have received 64 digits with help of our wire. Then the delimiter is going in order to denote that the communication is over. For instance 65 zero bits. 
+
+
+
+Yes, it is important. 
+
+
+
+We must signal the end of communication somehow. 
+
+
+
+For instance in UNIX based systems we use EOF sign in order to mark the end of file. 
+
+
+
+Or «\n» sign at the end of the string in order to make that this the end of the string and the new line has to be drawn in terminal. 
+
+
+
+If we talk about interpretation of the String data type in ANSI C99, we use NULL byte in order to denote the end of the memory space that we use to store the string in physical memory.
+
+
+
+If we talk about HTML, the Hyper Text Markup Language that is widely used since the beginning of the Internet Browsing era for the web-pages rendering purposes there we have special «\br» tag that tells the browser to forcefully draw the following content on the next line.
+
+
+
+OK, enough of theory for geeks! Let’s get back to Computer Science theory :-)
+
+
+
+Let’s supposed we have received some digits by wire. They represent the concrete number.
+
+
+
+How and where we can store the received  number in physical memory of the computer?
+
+
+
+We store everything there using the HEX values, the decimals will be transformed into the 16th base system.
+
+
+
+But let’s get back to the roots (N - 2) and represent the values in binary system.
+
+
+
+For instance we can use 8 variables that have «byte» data type or 4 variables with «ubyte» type.
+
+
+
+Also we can store these digits using 4 «int» variables or 2 «uint» variables.
+
+
+
+The «u» prefix here means the absence of the sign in other words «unsigned» value.
+
+
+
+The absence of the sign in the data type means that we have to allocate less memory for the potential value that our message actually weights in fact.
+
+
+
+For instance «integer» type can store +- 16 bytes but «unsigned integer» can store 32 bytes of the data. In other words it can store  binary number that contains 32 digits. 
+
+
+
+Example:
+
+
+
+11 11111 11111 11111 11111 11111 11111
+
+
+
+If we transform this number into decimal system it will be:
+
+
+
+(1 * 1) + (1 * 2) + (1 * 4) + (1 * 8)…. (1 * (2 ^ 32)) = 4294967295
+
+
+
+Have you got the idea?
+
+
+
+We store variables with sign in a pretty much complicated way, and this is out of scope of this article but to make a long story short I will reveal the method - we use the reverse form of the number in order to denote the borderline between negative and positive digits.
+
+
+
+<инь янь>
+
+
+
+So far so good! Let’s move forward!
+
+
+
+What is the data type that has the maximum capacity?
+
+
+
+Currently there are several of them: «long long integer» and «unsigned long long integer» correspondingly.
+
+
+
+And what is the maximum values of the numbers that we can store in these data types? 
+
+
+
++-(2,147,483,6) for the numbers with a sign and  for the absolute values 4,294,967,295.
+
+
+
+Can we make it better? Do N + 1 or even N + n?
+
+
+
+Yes, we can. 
+
+
+
+We can store numbers of infinite length in files or databases or even clusters of machines with raids where horizontal scalability and reliability principles have been applied. 
+
+
+
+It is the huge topic that belongs to Distributed Computing discipline. 
+
+
+
+Distributed Computing is very special area or sector of Computer Science that studies the problems and questions of massive data processing and storage, fault tolerance and robustness. 
+
+
+
+Actually it was my major while I was studying Computer Science and Information Technologies at SibSUTIS during 2006 — 2011.
+
+
+
+If you are interested I’m glad to share with you some knowledge and practices connected with these topics…
+
+
+
+Stay tuned :)
+
+
+
+############## MEDIUM VERSION ################
+
+64 bits
+Have you ever heard about «Long» scalar data type?
+And what about «Long Long»?
+And what is scalar data type?
+I will explain these topics below in a great details.
+«Even my mama thinks that my mind has gone» 
+© Coolio, «Gangsta Paradise», 1st of August 1995
+Well, she is definitely not aware about «Unsigned Long Long» usage patterns and x64 compilers and Assambler insertions inside C++ code aimed for performance boost after compilation from source on a specific hardware platforms like Apple M1 and of course heavy brainfuck provisioning for legacy-code maintainers... Well she is a pretty lucky woman in some way… Here is the words of wisdom aimed to her heart:
+My darling, please stay safe wherever the fuck you are and watch for your own mental diseases! All of a sudden I have my own pills to take too…
+You are not alone in this fucking ugly Un you Universe! Stay brave and healthy including mental health and this is not a joke! Isolate yourself from negative information programs! Stay awake and try to save sober mindset!
+P.S.
+Do not forget to eat some carrot from time to time!
+Пиздец треск щерево… салам-пополам)))But life goes on all things must pass, but somethings stay constant. I guess this basement types of scalars will not be replaced but only enhanced in the future.
+This scalar data type can be found almost in all modern programming languages like: C, C++, Java, Golang, Ruby, etc.
+The size of the allocated memory for the variables of this type is 64 bits.
+"111111111111111111111111111111111111111111111111111111111111111"
+If we convert this string into 10th based system from the binary we will get the following number:
+"9,223,372,036,854,775,807"
+The result is ~ 9 Quintillions. What is Quintillion?
+Quintillion is the denomination used for large numbers. A quintillion is the number name for 10 raised to the power of 18, that is, one followed by 18 zeros.
+In other words the number with 18 zeroes in front of it. 
+For instance:
+"1,000,000,000,000,000,000"
+It is an example of exactly one Quintillion
+Did you know about that?
+If the answer is «No» and you are not an interested crazy geek then then just stop reading this shit and go call your girlfriend or train your right your hands in the gym…
+But actually you can go further with this reading and try to understand the mess from my head.
+How we store the numbers and digits inside a computer's memory?
+Fisrtly we save the value.
+Then we can store the value without a sign (absolute value) or with the concrete sign.
+In other words the absolute value of some parameter without + or - sign or traditional representation.
+The memory that we have to allocate for absolute values in common case is less than
+for the numbers with the sign.
+For instance, let's suppose we have the following binary number:
+x = (111100010100000100000……11001111)
+The «x» variable here represents a number expressed in a binary computational system. The base of this system is «2».
+The alphabet of this system is 0 or 1.
+It is the alphabet of inner computer World where we pass the values across the wires with help of the micro-interruptions that denotes the valus of 0 or 1.
+How?
+In common case by the voltage level differences.
+Do you know the Morse code?
+- •• - ••• - 
+Long signal. Short signal. Short signal. Long. Etc…
+Same be applied can be applied in binary digits representation.
+If we have positive voltage level on wire it means we have to interoperate it as the «1» and if the level of voltage is negative or absent we can interpret it as the physical representation of «0».
+Let's suppose that we have received 64 digits with help of our wire. Then the delimiter is going in order to denote that the communication is over. For instance 65 zero bits.
+Yes, it is important.
+We must signal the end of communication somehow.
+For instance in UNIX based systems we use EOF sign in order to mark the end of file.
+Or «\n» sign at the end of the string in order to make that this the end of the string and the new line has to be drawn in terminal.
+If we talk about interpretation of the String data type in ANSI C99, we use NULL byte in order to denote the end of the memory space that we use to store the string in physical memory.
+If we talk about HTML, the Hyper Text Markup Language that is widely used since the beginning of the Internet Browsing era for the web-pages rendering purposes there we have special «\br» tag that tells the browser to forcefully draw the following content on the next line.
+OK, enough of theory for geeks! Let's get back to Computer Science theory :-)
+Let's supposed we have received some digits by wire. They represent the concrete number.
+How and where we can store the received number in physical memory of the computer?
+We store everything there using the HEX values, the decimals will be transformed into the 16th base system.
+But let's get back to the roots (N - 2) and represent the values in binary system.
+For instance we can use 8 variables that have «byte» data type or 4 variables with «ubyte» type.
+Also we can store these digits using 4 «int» variables or 2 «uint» variables.
+The «u» prefix here means the absence of the sign in other words «unsigned» value.
+The absence of the sign in the data type means that we have to allocate less memory for the potential value that our message actually weights in fact.
+For instance «integer» type can store +- 16 bytes but «unsigned integer» can store 32 bytes of the data. In other words it can store binary number that contains 32 digits.
+Example:
+11 11111 11111 11111 11111 11111 11111
+If we transform this number into decimal system it will be:
+(1 * 1) + (1 * 2) + (1 * 4) + (1 * 8)…. (1 * (2 ^ 32)) = 4294967295
+Have you got the idea?
+We store variables with sign in a pretty much complicated way, and this is out of scope of this article but to make a long story short I will reveal the method - we use the reverse form of the number in order to denote the borderline between negative and positive digits.
+<инь янь>
+So far so good! Let's move forward!
+What is the data type that has the maximum capacity?
+Currently there are several of them: «long long integer» and «unsigned long long integer» correspondingly, also there are specific scalars that your compilator, for instance GCC, can provide you for your favorite hardware platform, they are out of scope of this article right now, but you are free to do your own research.
+And what is the maximum values of the numbers that we can store in these data types?
++-(2,147,483,6) for the numbers with a sign and for the absolute values 4,294,967,295.
+Can we make it better? Do N + 1 or even N + n?
+Yes, we can.
+We can store numbers of infinite length in files or databases or even clusters of machines with raids where horizontal scalability and reliability principles have been applied.
+It is the huge topic that belongs to Distributed Computing discipline.
+Distributed Computing is very special area or sector of Computer Science that studies the problems and questions of massive data processing and storage, fault tolerance and robustness.
+Actually it was my major while I was studying Computer Science and Information Technologies at SibSUTIS during 2006–2011.
+If you are interested I'm glad to share with you some knowledge and practices connected with these topics…
+Stay tuned :)
